@@ -25,7 +25,7 @@ project.json: top.v mkTop.v
 
 # Place and Route
 project_pnr.json: project.json
-	nextpnr-gowin --json project.json --write project_pnr.json --freq 27 --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst --pre-pack pre-pack.py
+	nextpnr-himbaechel --json project.json --write project_pnr.json --freq 27 --device ${DEVICE} --vopt family=${FAMILY} --vopt cst=${BOARD}.cst --pre-pack pre-pack.py
 
 # Generate Bitstream
 project.fs: project_pnr.json
